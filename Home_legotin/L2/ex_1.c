@@ -14,28 +14,24 @@ bool king_f(int let, int ch)
 {
     if(abs(let) <= 1 && abs(ch) <= 1)
         return true;
-    else return false;
 }
 
 bool rook_f(int let, int ch)
 {
     if(let == 0 || ch == 0)
       return true;
-    else return false;
 }
 
 bool knight_f(int let, int ch)
 {
-    if((abs(let) == 1 && abs(ch) == 2)||(abs(let) == 2 && abs(ch) == 1))
+    if((abs(abs(let) - abs(ch)) == 1))
       return true;
-    else return false;
 }
 
 bool bishop_f(int let, int ch)
 {
     if(abs(let) == abs(ch))
       return true;
-    else return false;
 }
 
 bool queen_f(int let, int ch)
