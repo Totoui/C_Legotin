@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char k[] = "SOMETHING"; // <- Здесь входная строка
+    char k[] = "SOMETHING ffdsgfgdskfs 5737938894 hfhdi8rehuhf8e reuhfie88 rfhrhre444 4343454352 ferg 45998934"; // <- Здесь входная строка
 
     unsigned num =0, stri =0, i1 =0 , i2 =0, len;
     char concl;
@@ -13,7 +13,7 @@ int main(void)
     // printf("This is last simbol_%c_<-\n", k[(sizeof(k)/sizeof(k[0]))-2]);
     for(int i = 0; i < len; i++)
     {
-        concl =1;
+        concl = 0;
   
         if((k[i] == ' ' || k[i] == '\0' || k[i] == '\t') && i1 < i2+1)
         {
@@ -25,14 +25,12 @@ int main(void)
             {
                 if(isalpha(k[n]) == 0)
                 {
-                 concl = 0;
+                 concl = 1;
                  break;
                 }
             }
-            if(concl != 0 && i1+1 != i2)
+            if(concl != 1 && i1+1 != i2)
                 stri +=1;
-
-            concl =1;
 
             for(int n = i1+1; n <i2-1; n++)
             {
