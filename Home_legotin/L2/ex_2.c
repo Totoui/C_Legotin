@@ -3,8 +3,10 @@
 
 int main(void)
 {
-    char k[] = "SOMETHING ffdsgfgdskfs 5737938894 hfhdi8rehuhf8e reuhfie88 rfhrhre444 4343454352 ferg 45998934"; // <- Здесь входная строка
+    char k[10000] = ""; // <- Здесь входная строка
 
+    printf("Input string(under 10000 characters) is:");
+    scanf("%9999[^\n]s", k);
     unsigned num =0, stri =0, i1 =0 , i2 =0, len;
     char concl;
 
@@ -47,6 +49,5 @@ int main(void)
     }
     
     printf("Our number of string is %u\nOur number of numbers is %u", stri, num);
-
     return 0;
 }
